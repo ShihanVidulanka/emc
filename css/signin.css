@@ -1,0 +1,78 @@
+body{
+	background-color: #bdc7c5;
+	background-image: url("../img/login2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	font-size: 105%;
+}
+.div1{
+	width: 490px;
+	margin: auto;
+	background-color:hsla(143, 2%, 54%,0.75);
+	position: relative;
+	top: 170px;
+	padding: 9px;
+	border-radius: 15px;
+}
+div.errmsg {
+	padding-left:40px;
+	color: red;
+}
+.div1 h2{
+	margin:10px;
+	color:hsl(29deg 92% 45%);
+	font-size: 30px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.border{
+	border-radius: 15px;
+	outline: none;
+}
+.inputbox{
+	font-family: arial;
+	background-color: hsl(168deg 8% 91% / 56%);
+	font-color:black;
+	font-weight: 40px;
+	font-size: 110%;
+	text-indent: 10px;
+}
+::placeholder{
+  color: black;
+  opacity: 1;
+}
+.username{
+	position: relative;
+	top: 10px;
+}
+.dropboxline{
+	position: relative;
+	top: 10px;
+}
+.dropbox{
+	background-color: hsl(168deg 8% 91% / 56%);
+	font-color:black;
+	text-indent: 2px;
+}
+.Names_and_type{
+	position: relative;
+	margin: 0px;
+}
+h4{
+	font-family: verdan;
+	font-size: 20px
+}
+#signin{
+	position: relative;
+	top: 25px;
+	font-size: 110%;
+	margin-left: 200px;
+	margin-bottom:	20px;
+	background-color: hsl(40deg 93% 53%);
+}
+#selection{
+	position: relative;
+	width: 100px;
+	font-size: 100%;
+}

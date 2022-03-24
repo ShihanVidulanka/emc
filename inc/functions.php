@@ -1,0 +1,103 @@
+<?php
+	function filter($sender,$receiver,$index_no,$sort_type,$status,$user_type){
+		global $connection;
+		$mail_list='';
+		$mail_receiver='receiver';
+		// $mail_sender='sender';
+
+		if($sort_type==0){
+			$sort_type = '';
+		}else{
+			$sort_type = "AND type = {$sort_type}";
+		}
+		if($status==0){
+			$status = '';
+		}else{
+			$status = "AND ap_status = {$status}";
+		}
+
+		if (!strcmp($user_type,'Lecturer')) {
+			$mail_receiver='sender';
+			$temp=$sender;
+			$sender = $receiver;
+			$receiver = $temp;
+
+			// $mail_sender='receiver';	
+		}
+
+		$sender = mysqli_real_escape_string($connection, $sender);
+		$receiver = mysqli_real_escape_string($connection, $receiver);
+		$index_no = mysqli_real_escape_string($connection,$index_no );
+		$sort_type = mysqli_real_escape_string($connection,$sort_type );
+		$status = mysqli_real_escape_string($connection,$status );
+		$data = "SELECT * FROM emails WHERE (sender LIKE '%{$sender}%' AND receiver LIKE '%{$receiver}%' AND index_no LIKE '%{$index_no}%' ". "{$sort_type}" ." ". "{$status} " . ") ORDER BY date_time DESC";
+		$data_set = mysqli_query($connection, $data);
+		while ($user = mysqli_fetch_assoc($data_set)) {
+			$mail_list .= "<tr>";
+
+
+
+			$query_reciver = "SELECT * FROM user WHERE email = '{$user[$mail_receiver]}' LIMIT 1";
+			$receiver_set = mysqli_query($connection, $query_reciver);
+			$result_receiver = mysqli_fetch_assoc($receiver_set);
+			$f_name= ucwords($result_receiver['first_name'] . " " . $result_receiver['last_name']);
+
+
+			$mail_list .= "<td><a href='iframe.php?no={$user['no']}' target='iframe_a' ><div class='table'>{$f_name}</div></a></td>";
+			$mail_list .= "</tr>";
+		}
+
+		return $mail_list;
+	}
+
+	function verify_query($result_set) {
+
+		global $connection;
+
+		if (!$result_set) {
+			die("Database query failed: " . mysqli_error($connection));
+		}
+
+	}
+
+	function check_req_fields($req_fields) {
+		// checks required fields
+		$errors = array();
+		
+		foreach ($req_fields as $field) {
+			if (empty(trim($_POST[$field]))) {
+				$errors[] = $field . ' is required';
+			}
+		}
+		return $errors;
+	}
+
+	function check_max_len($max_len_fields) {
+		// checks max length
+		$errors = array();
+
+		foreach ($max_len_fields as $field => $max_len) {
+			if (strlen(trim($_POST[$field])) > $max_len) {
+				$errors[] = $field . ' must be less than ' . $max_len . ' characters';
+			}
+		}
+		return $errors;
+	}
+
+	function display_errors($errors) {
+		// format and displays form errors
+		echo '<div class="errmsg">';
+		echo '<b>There were error(s) on your form.</b><br>';
+		foreach ($errors as $error) {
+			$error = ucfirst(str_replace("_", " ", $error));
+			echo '- ' . $error . '<br>';
+		}
+		echo '</div>';
+	}
+
+	function is_email($email)
+	{
+		return(preg_match("/^[-_.[:alnum:]]+@((([[:alnum:]]|[[:alnum:]][[:alnum:]-]*[[:alnum:]])\.)+(ad|ae|aero|af|ag|ai|al|am|an|ao|aq|ar|arpa|as|at|au|aw|az|ba|bb|bd|be|bf|bg|bh|bi|biz|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|com|coop|cr|cs|cu|cv|cx|cy|cz|de|dj|dk|dm|do|dz|ec|edu|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gh|gi|gl|gm|gn|gov|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|in|info|int|io|iq|ir|is|it|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|mg|mh|mil|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|museum|mv|mw|mx|my|mz|na|name|nc|ne|net|nf|ng|ni|nl|no|np|nr|nt|nu|nz|om|org|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|pro|ps|pt|pw|py|qa|re|ro|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|sk|sl|sm|sn|so|sr|st|su|sv|sy|sz|tc|td|tf|tg|th|tj|tk|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|um|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|yu|za|zm|zw)$|(([0-9][0-9]?|[0-1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\.){3}([0-9][0-9]?|[0-1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5]))$/i" ,$email));
+	}
+	
+?>

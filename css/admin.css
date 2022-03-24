@@ -1,0 +1,140 @@
+*{
+	margin: 0;
+}
+
+body {
+	/*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
+	font-family: 'Courier New', serif;
+	font-size: 14px;
+	background-image: url("../img/mike-yukhtenko-wfh8dDlNFOk-unsplash.jpg");
+	background-size: cover;
+}
+.search h1{
+	color: white;
+}
+.login {
+	width: 350px;
+	margin: 100px auto;
+}
+
+button {
+	margin: 0px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding: 10px;
+	border:solid black;	
+	border-radius: 15px;
+	color: maroon;
+}
+button:hover{
+	opacity: 0.6;
+}
+
+.nevigationbar {
+  list-style-type: none;
+  margin: 30px;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+.nevigationbar li {
+	color:red;
+	margin-left:0px;
+	display:inline;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+div.errmsg {
+	color: red;
+}
+
+p.error {
+	color: red;
+	padding: 10px;
+}
+
+p.info {
+	background: green;
+	color: white;
+	padding: 10px;
+}
+
+input {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+header{
+	background: #eee;
+	overflow: auto;
+	padding: 10px;
+}
+
+.appname{
+	float: left;
+}
+
+.loggedin{
+	float: right;
+}
+
+main {
+	width: 1000px;
+	margin: 30px auto;
+}
+
+main h1 {
+	margin-bottom: 20px;
+	font-size: 50px;
+}
+
+main h1 span {
+	font-size: 20px;
+}
+
+table.masterlist {
+	width: 100%;
+	border-collapse: collapse;
+	color: white;
+}
+
+table.masterlist th {
+	background: #aaa;
+	text-align: left;
+}
+
+table.masterlist th, table.masterlist td {
+	padding: 10px;
+	border-bottom: 2px solid #aaa;
+}
+
+form.userform label {
+	width: 30%;
+	float: left;
+}
+
+form.userform input {
+	width: 60%;
+}
+
+form.userform button {
+	width: 200px;
+}
+
+.errmsg {
+	margin: 20px 0;
+}
+
+.access{
+	color: yellow;
+	font-size: 105%;
+	font-weight: bold;
+}

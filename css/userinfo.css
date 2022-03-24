@@ -1,0 +1,162 @@
+
+body{
+  background-image: url("../img/wp5235369-circles-ultra-hd-wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover; 
+}
+
+div.transbox {
+  font-family: verdan;
+  width: 40%;
+  height: 75vh;
+  margin: 30px;
+  /*text-align: center;*/
+  background-image: linear-gradient(to bottom right, black, blue);
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  opacity: 0.8;
+  float: left;
+}
+
+div.transbox1 {
+  font-family: verdan;
+  width: 40%;
+  height: 75vh;
+  margin: 30px;
+  background-image: linear-gradient(to bottom right, black, blue);
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  opacity: 0.8;
+  float: right;
+}
+
+div.transbox1 ul li {
+  margin: 10px;
+}
+
+
+.errmsg {
+  padding-left:40px;
+  color: red;
+  }
+
+div.cont{
+  padding: 25px 50px 1px 100px;
+	margin: auto;
+	width: 20000;
+	height: 590;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+div.box {
+  width: 300px;
+  height: 25px;
+  margin: 20px;
+  margin-left: 100px;
+  background-color: #426600;
+  border: 1px solid black;
+  /*opacity: 1;*/
+}
+
+div.box p {
+  font-family:  Arial,Verdana,Geneva,sans-serif;
+  margin: 1%;
+  font-weight: bold;
+  background-color: #F4D03F;
+}
+h1{
+	color: blue;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);}
+ .text-block {
+  position: absolute;
+
+  
+  background-color: white;
+  color: black;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.tab {
+ margin-left: 2.5em;
+}
+.inputbox{
+  width: 200px;
+  text-indent:5px;
+}
+li{
+  font-size: 20px;
+}
+::placeholder{
+  color: green;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.Adress{
+  width: 300px;
+  text-indent:5px;
+}
+
+.textbody{
+  clear: both;
+  margin-left: 5%;
+}
+.btn{
+  background-image: linear-gradient(to bottom right, #F52E1D, yellow);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: verdan;
+  font-size: 16px;
+  margin: 2px;
+}
+.btn:hover{
+  background-color: #5CBBB3 ;
+  font-family: verdan;
+  color: white;
+}
+}

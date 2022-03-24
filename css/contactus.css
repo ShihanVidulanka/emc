@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: 105%;
+}
+
+.contact {
+	font-family: Geneva;
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg);
+	background-size: cover;
+
+}
+
+.contact .content {
+	font-size: 20px;
+	max-width: 800px;
+	text-align: center;
+	justify-content: center;
+	background: -webkit-linear-gradient(#ff80ff, #fff);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.contact .content h2 {
+	font-size: 42px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	background: -webkit-linear-gradient(#e6e600, #00e6e6);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.content .contact p {
+	font-weight: 400;
+	color: #00e6ac;
+}
+
+.container {
+	width: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.container .contactinfo {
+	width: 50%;
+	display: flex;
+	margin-left: 100px;
+	margin-top: -15px;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+	float: left;
+}
+
+.container .contactinfo .box {
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+
+.container .contactinfo .box .icon {
+	min-width: 60px;
+	height: 60px;
+	background: #00bcd4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+
+.container .contactinfo .box .text {
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+	align-items: left;
+	justify-content: center;
+}
+
+.container .contactinfo .box .text h3 {
+	font-weight: 500;
+	color: #00bcd4;
+}
+
+.contactform {
+	width: 40%;
+	padding: 40px;
+	margin-right: 100px;
+	margin-top: 50px;
+	/*justify-content: right;*/
+	background: hsl(20, 1%, 86%);
+}
+
+.errmsg {
+	padding-left:40px;
+	color: red;
+}
+
+.contactform h2 {
+	font-family:  Geneva,Arial,Verdana,sans-serif;
+	font-size: 30px;
+	color: #333;
+	font-weight: 500;
+}
+
+.contactform .inputbox {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.contactform .inputbox input {
+	font-family:  Arial,Verdana,Geneva,sans-serif;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	background: hsl(20, 1%, 86%);
+}
+.contactform .inputbox textarea {
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	background: hsl(20, 1%, 86%);
+}
+
+.contactform button {
+	background: #eee;
+	/*background-image: linear-gradient(to bottom right, #F52E1D, yellow);*/
+	color: red;
+	/*border: none;*/
+	border-radius: 15px;
+	border-color: linear-gradient(to bottom right, #F52E1D, yellow);
+	border-width: 3px;
+	padding: 10px 20px;   /*first top and bottom then right and left*/
+	font-size: 16px;
+	font-family: 'Courier New', serif;
+	font-weight: bold;
+	/*background: hsl(20, 1%, 86%);*/
+
+}

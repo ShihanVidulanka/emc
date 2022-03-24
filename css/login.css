@@ -1,0 +1,112 @@
+body{
+	background-color: #B3AAA8;
+	background-image: url("../img/login2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+.loginbox{
+	background-color:hsla(143, 2%, 54%,0.75);
+	width: 400px;
+	text-align: center;
+	padding: 30px;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 75px;
+	position: relative;
+	top: 190px;
+}
+.inputbox{
+	background-color: hsl(168deg 8% 91% / 56%);
+	width: 230px;
+	font-family: arial;
+	font-weight: 20px;
+	font-size: 16px;
+	text-indent: 10px;
+}
+p.error {
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+	padding: 10px;
+}
+
+p.info {
+	background: green;
+	color: white;
+	padding: 10px;
+}	
+h4{
+	font-family: verdan;
+	font-size: 20px;
+}
+.check{
+	float: right;
+	position: relative;
+}
+p{
+	font-family: verdan;
+}
+#login{
+	font-family: arial;
+	float: right;
+	position: relative;
+	font-size: 110%;
+	top: 10px;
+	background-color: hsl(40deg 93% 53%);
+}
+.border_{
+	border-radius: 15px;
+	outline: none;
+}
+
+.border_ a:visited {
+  	color: pink;
+  	background-color: transparent;
+  	text-decoration: none;
+}
+
+.topbanner{
+	height: 73px;
+	background-color: black;
+	color:white;
+	position: relative;
+	margin: -22px -8px;
+	padding: 5px 0px;
+	font-size:23px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+
+}
+#intro{
+	float: left;
+	margin-left: 2%;
+	position: relative;
+	top: 14px;
+	font-family: 'Crimson Text', serif;
+}
+#logo{
+	float: right;
+	position: relative;
+	left: px;
+	top: 8px;
+	width: 110px;
+	height: 70px;
+}
+.loginbox a{
+	position: relative;
+	float: right;
+	text-align: right;
+	font-weight: bold;
+	font-size: 19px;
+}
+.loginbox a:hover{
+	color: hsl(246, 69%, 27%);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+.loginbox a:visited{
+	color: hsl(0, 100%, 33%);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
